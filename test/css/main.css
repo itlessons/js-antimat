@@ -1,0 +1,67 @@
+body {
+    background: #f2f2f2;
+}
+
+a {
+    color: #4F6B72;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.demo {
+    width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+    color: #4F6B72;
+    font-family: "PT Sans", Verdana, Arial, sans-serif;
+    font-size: 13px;
+}
+
+.demo h1 {
+    font-size: 18px;
+}
+
+.demo .permalink {
+    display: block;
+    color: #4F6B72;
+    margin: 10px 0;
+}
+
+.demo .obsceneChecker{
+    background: #fff;
+    width: 400px;
+    padding: 0 10px 10px;
+    -moz-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    -webkit-box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.demo .obsceneChecker .oc-title{
+    margin: 0 -10px 10px;
+    padding: 10px;
+    color: #fff;
+    background: #00B8D9;
+    font-size: 16px;
+}
+
+.demo .obsceneChecker .result{
+    padding: 0 5px 5px 25px;
+    margin: 5px 0;
+}
+
+.demo .obsceneChecker .result.ok{
+    background: url("../images/ok.png") no-repeat;
+}
+
+.demo .obsceneChecker .result.fail{
+    background: url("../images/fail.png") no-repeat;
+}
+
+.demo .obsceneChecker input{
+
+    display: block;
+    width: 100%;
+}

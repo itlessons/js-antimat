@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="robots" content="noindex,nofollow"/>
+    <title>Демо Простой антимат на Javascript!</title>
+</head>
+<body>
+<div class="demo">
+
+    <h1>Демо Простой антимат на Javascript!</h1>
+
+    <div class="obsceneChecker">
+        <div class="oc-title">Проверка на мат</div>
+
+        <div id="results">
+            <div class="result ok">вот так дела</div>
+            <div class="result fail">су ка вот так дела</div>
+        </div>
+
+        <input type="text" placeholder="Сообщение" id="message-input">
+    </div>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="../antimat.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            var msgInput = $('#message-input');
+            var results = $('#results');
+
+            msgInput.keydown(function (e) {
+                if (e.keyCode == 13) {
+                    checkForObscene();
+                }
+            }).focus();
+
+            function checkForObscene() {
+                var txt = msgInput.val();
+                if (txt < 1)
+                    return;
+
+                msgInput.val('').focus();
+
+                var result = window.containsMat(txt);
+                var cls = result ? "fail" : "ok";
+                results.append("<div class=\"result " + cls + "\">" + txt + "</div>")
+            }
+        });
+    </script>
+</div>
+</body>
+</html>
